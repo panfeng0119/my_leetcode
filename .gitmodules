@@ -1,0 +1,3 @@
+[submodule "LeetCode-in-Go"]
+	path = LeetCode-in-Go
+	url = https://github.com/aQuaYi/LeetCode-in-Go
