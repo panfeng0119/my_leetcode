@@ -20,9 +20,8 @@ type question struct {
 	a ans
 }
 
-func Test_OK(t *testing.T) {
+func TestTwoSum(t *testing.T) {
 	ast := assert.New(t)
-
 	qs := []question{
 		question{
 			p: para{
