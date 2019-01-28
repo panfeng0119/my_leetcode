@@ -5,7 +5,7 @@
 git submodule foreach git pull
 
 # 日志信息
-Date=`date "+ %Y %m %d %H:%M"`
+Date=`date "+ %Y-%m-%d %H:%M"`
 
 # 标记当前路径
 DIR=`pwd`
@@ -17,14 +17,14 @@ then
     exit 1;
 fi
 
-msg="${Date} (AutoPush Script)"
+msg="(AutoPush Script)"
 # 可以考虑设置一个提交参数
 if [ $# -eq 1 ]
   then msg="$1"
 fi
 
 # 提交
-git add --all && git commit -m "${msg}"
+git add --all && git commit -m "${Date} ${msg}"
 
 echo "正在 push"
 git push -u origin master
